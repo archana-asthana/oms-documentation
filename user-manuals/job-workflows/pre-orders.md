@@ -134,6 +134,12 @@ When there are any changes in the arrival dates of the multiple items in the pur
 3. Ensure the current inventory of the item must be 0.
 4. Ensure that the file is processed by Shopify from the SFTP location
 
+| Parameter          | Type   | Description                                                             | Default Value | Example Value          |
+|--------------------|--------|-------------------------------------------------------------------------|---------------|------------------------|
+| RunTime            | String | Specifies the Runtime scheduled for a job, which can be customized.     | null          | April 17, 2024, 1:15 PM |
+| Schedule Frequency | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc. which can be customized as required. | 15 Minutes   | Every 15 minutes         |
+
+
 ## Jobs for Sales Orders with Pre-Order Items
 
 To ensure accurate representation of pre-order information when pre-orders are downloaded alongside regular orders, specific notes or tags are included in incoming sales orders for easy identification of pre-orders. The job is scheduled by selecting the respective checkboxes while configuring the Pre-sell on the Shopify job from the Job Manager application.
@@ -145,6 +151,12 @@ Users are allowed to select multiple checkboxes to schedule various jobs in HotW
 **Description:**
 These jobs assign pre-order/backorder tags to orders containing pre-selling items. This simplifies identification for the operations team. The job is scheduled by selecting the respective checkbox against the Add Pre-Order Tag or Add Backorder Tag. By default, the frequency will be scheduled just as specified for the Pre-sell on the Shopify job.
 
+| Parameter          | Type   | Description                                                             | Default Value | Example Value          |
+|--------------------|--------|-------------------------------------------------------------------------|---------------|------------------------|
+| RunTime            | String | Specifies the Runtime scheduled for a job, which can be customized.     | null          | April 17, 2024, 1:15 PM |
+| Schedule Frequency | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc. which can be customized as required. | 15 Minutes   | Every 15 Minutes          |
+
+
 ### Add Promise Date
 
 **Description:**
@@ -155,10 +167,22 @@ These jobs will assign promise dates to sales orders, mirroring the dates provid
 **Description:** 
 There might be multiple purchase Orders uploaded in HotWax Commerce. Once the active PO is exhausted, the subsequent PO gets active with a new arrival date. Sometimes, a new PO is introduced with an early arrival date, while the Item already has a specified promise date at Shopify PDP. In cases where promise dates change due to shifts in the arrival date of purchase orders, updates to the promise dates in sales orders are necessary. The Update promise date job updates the promise date notes of the sales orders. This job, when activated via checkbox, adds notes to the impacted order items on Shopify for changes in promise dates. By default, the frequency will be scheduled just as specified for the Pre-sell on the Shopify job.
 
+| Parameter          | Type   | Description                                                             | Default Value | Example Value          |
+|--------------------|--------|-------------------------------------------------------------------------|---------------|------------------------|
+| RunTime            | String | Specifies the Runtime scheduled for a job, which can be customized.     | null          | April 17, 2024, 1:15 PM |
+| Schedule Frequency | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc. which can be customized as required. | 15 Minutes   | Every 15 Minutes         |
+
+
 ### Adjust ATP on Early PO in Bulk
 
 **Description:**
 The ATP available on the purchase orders needs to be handled when exhausted or shifted from one PO to the other PO. Merchandisers frequently handle multiple Purchase Orders for identical SKUs. Sometimes, they might upload a new Purchase Order with an earlier promised date, even if there's an existing Purchase Order for the same SKU in the system. In such cases, re-allocating sales orders from the initial Purchase Order to the latest one with an earlier date becomes vital. This ensures that customers who place pre-orders first are given priority, guaranteeing timely delivery. The task automatically adjusts Purchase Order ATP allocations and reallocates pre-orders accordingly. To schedule this, users need to enable and set up the Adjust ATP on Early PO in Bulk by selecting the checkbox available in the More Jobs section.
+
+| Parameter          | Type   | Description                                                             | Default Value | Example Value          |
+|--------------------|--------|-------------------------------------------------------------------------|---------------|------------------------|
+| RunTime            | String | Specifies the Runtime scheduled for a job, which can be customized.     | null          | April 17, 2024, 1:15 PM |
+| Schedule Frequency | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc. which can be customized as required. | Every Hour   | Hourly         |
+
 
 ## Promise Date Changes
 
@@ -167,10 +191,21 @@ The ATP available on the purchase orders needs to be handled when exhausted or s
 **Description:**
 Merchants can change the promise dates in sales orders if there are any changes in the promise date due to arrival date changes in Purchase orders through this job. This job can be scheduled by checking the box against the job name Auto Sync Date to order, available in the job card Promise Date Changes. The frequency can be set as required from the available dropdown or can be customized.
 
+| Parameter          | Type   | Description                                                             | Default Value | Example Value          |
+|--------------------|--------|-------------------------------------------------------------------------|---------------|------------------------|
+| RunTime            | String | Specifies the Runtime scheduled for a job, which can be customized.     | null          | April 17, 2024, 1:15 PM |
+| Schedule Frequency | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc. which can be customized as required. | Every Hour   | Hourly          |
+
+
 ### Email Customers
 
 **Description:**
 To efficiently manage customer expectations regarding changes in promised dates, activating the Email customers checkbox initiates a job that triggers automatic emails to customers. This action ensures customers are informed whenever there's a modification in the promised date since the job notifies customers of any changed promise dates for their orders.
+
+| Parameter          | Type   | Description                                                             | Default Value | Example Value          |
+|--------------------|--------|-------------------------------------------------------------------------|---------------|------------------------|
+| RunTime            | String | Specifies the Runtime scheduled for a job, which can be customized.     | null          | April 17, 2024, 1:15 PM |
+| Schedule Frequency | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc. which can be customized as required. | 15 Minutes   | Every 15 Minutes         |
 
 
 # Release Pre-orders
@@ -184,3 +219,9 @@ HotWax Commerce facilitates users to automatically handle the release and broker
 
 **Description:**
 Merchandisers can schedule this job through the Job Manager Application from the Pre Order Page by enabling the Run Daily checkbox in the auto-releasing card. This automated process releases pre-orders where the shipping date has arrived and inventory is available in HotWax Commerce for release.
+
+| Parameter          | Type   | Description                                                             | Default Value | Example Value          |
+|--------------------|--------|-------------------------------------------------------------------------|---------------|------------------------|
+| RunTime            | String | Specifies the Runtime scheduled for a job, which can be customized.     | null          | April 17, 2024, 7:15 AM |
+| Schedule Frequency | String | Schedules frequency from the dropdown as every 5 minutes, Hourly, Daily, Weekly, etc. which can be customized as required. | Daily Once   | Every Day          |
+
