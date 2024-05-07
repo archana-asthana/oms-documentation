@@ -4,11 +4,11 @@ BOPIS, or Buy Online, Pick Up In-Store, is a feature offered by HotWax Commerce 
 
 This document gives a sequential walkthrough of how to enable your facilities for BOPIS and ensure that the pickup facilities are available on Shopify PDP.
 
-# Create a Facility for Store Pickup Options
+## Create a Facility for Store Pickup Options
 
 To facilitate BOPIS operations, retailers need to set up and configure facilities for store pickups where customers can collect their purchases by ordering online.
 
-## Set up Facilities
+### Set up Facilities
 
 1. Login to Launchpad with your user credential.
 2. Navigate to the Facilities App in the Launchpad.
@@ -18,17 +18,19 @@ To facilitate BOPIS operations, retailers need to set up and configure facilitie
 6. Add the name of the facility, internal IDs, and external IDs of the facility on the `Create Facility` page.
 7. Click on the `Create Facility` button.
 
-## Add Address and Facility Location
+### Add Address and Facility Location
 
 1. Add the facility address, city, and the Zip code.
 2. Select country and state from the dropdown.
 3. Add the contact number and further add latitude and longitude details (to ensure the exact geolocation of the facility). 
 
-**Note- HotWax Commerce App uses "storeLookup" API to display the distance of stores from a customer's current location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer. Make sure that latitude and longitudes are added for both new and existing facilities.**
-[Link to this document](https://docs.hotwax.co/user-guides/administration/facilities/add-facility-address#add-latitude-and-longitude)
+{% hint style="info" %}
+**Info hints** are great for showing general information, or providing tips and tricks.
+Note- HotWax Commerce App uses "storeLookup" API to display the distance of stores from a customer's current location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer. Make sure that latitude and longitudes are added for both new and existing facilities.{% endhint %}
+[Link to this document]
 
 
-## Add Product Store
+### Add Product Store
 
 Facilities can have products from multiple brands which are configured as product stores in HotWax Commerce. If the retailer has multiple brands, retailers have to specify that the facility is containing the product of which brand. This function enables users to link/delink a facility to one or multiple product stores. 
 
@@ -36,7 +38,7 @@ Facilities can have products from multiple brands which are configured as produc
 2. Select the store/s from the dropdown menu
 3. Click the `Save` icon to save the changes.
 
-## Fulfillment Configuration of Facilities
+### Fulfillment Configuration of Facilities
 
 The Facility groups are used to define the scope and functionality of the facility for omnichannel order management. 
 
@@ -44,13 +46,13 @@ If a retailer wants to configure the fulfillment settings of facilities in bulk,
 
 Facilities have the option to choose whether or not to participate in selling their inventory online. If a facility is capable of fulfilling orders and wants its inventory to be sold online, it has to be included in the `Online facility` group. Retailers can also turn the toggle on from 'sell online card' to add the facility to `Online facility` group. Similarly, if the facility supports HotWax Commerce Fulfillment app, then turn the toggle on of `Use Native Fulfillment App` or add the facility to `OMS Fulfillment group`.
 
-# Manage Inventory
+## Manage BOPIS Inventory
 
-## Inventory Sync in HotWax Commerce
+### Inventory Sync in HotWax Commerce
 
 For a product to be available for pickup at Shopify PDP, it must have inventory at the retail store (facility). HotWax Commerce offers automated and manual bulk Inventory upload through CSV. HotWax commerce gets inventory feed from ERP, WMS, or POS systems or Manual uploads, to update the inventory in its system. The external system places the order on the SFTP location HotWax commerce processes these files and updates the inventory in its system.
 
-## ATP
+### ATP Computation
 
 When the inventory is received, a product’s QOH and ATP is updated in HotWax Commerce. HotWax Commerce calculates Physical Available to Promise (ATP) of a facility by considering various factors, such as safety stock, threshold, reserved quantity, and orders in the queue. 
 
@@ -58,7 +60,7 @@ ATP = QOH - (Reserved quantities + Safety stock + Threshold + Orders in brokerin
 
 For each store that allows BOPIS, HotWax Commerce uses the checkInventory API to check the available to promise (ATP) inventory for the desired product. Display all the facilities with non-zero inventory numbers on the product detail page (PDP) for customers to select and place a BOPIS order.
 
-# Configure Shopify BOPIS Scripts
+## Configure Shopify BOPIS Scripts
 
 Retailers can configure Shopify BOPIS scripts from the Shopify Shop page in HotWax Commerce, enabling PDP changes on Shopify. Retailers who install the HotWax Commerce Integration App gain access to PDP customization functionality as a default feature. By installing the default JavaScript (JS) and Cascading Style Sheets (CSS) scripts from the Shopify Shop page into HotWax Commerce, retailers can effortlessly start offering BOPIS to their customers.
 
@@ -75,9 +77,9 @@ Retailers can configure Shopify BOPIS scripts from the Shopify Shop page in HotW
 
 This ensures seamless integration and reflects the modifications on the Shopify storefront instantly. Users can verify the pickup button at Shopify PDP and confirm that both the scripts are added successfully. 
 
-# Verify Pickup Button at Shopify
+## Verify Pickup Button at Shopify
 
-### Once you have set up a facility for BOPIS, you can verify the BOPIS availability through the following steps:
+Once you have set up a facility for BOPIS, you can verify the BOPIS availability through the following steps:
 
 1. Login to Launchpad.
 2. Navigate to the Facilities App in the Launchpad.
