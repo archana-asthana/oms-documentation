@@ -24,8 +24,8 @@ To facilitate BOPIS operations, retailers need to set up and configure facilitie
 2. Select country and state from the dropdown.
 3. Add the contact number and further add latitude and longitude details (to ensure the exact geolocation of the facility). 
 
-{% hint style="**Note- HotWax Commerce App uses "storeLookup" API to display the distance of stores from a customer's current location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer. Make sure that latitude and longitudes are added for both new and existing facilities.**" % endhint %}
-[Link to this document]
+{% hint style="info" %} **Note- HotWax Commerce App uses "storeLookup" API to display the distance of stores from a customer's current location. The API relies on the latitude and longitude coordinates of facilities to determine their proximity to the customer. Make sure that latitude and longitudes are added for both new and existing facilities.** {% endhint %}
+[Store Lookup API]
 
 
 ### Add Product Store
