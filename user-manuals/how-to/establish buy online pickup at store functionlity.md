@@ -42,7 +42,7 @@ The Facility groups are used to define the scope and functionality of the facili
 
 If a retailer wants to configure the fulfillment settings of facilities in bulk, they can add facilities to the group (link to manage group page). `Pickup` is a default facilities group type to ensure that facilities are available to the customer on Shopify PDP as a pickup option. Only facilities that are added to this group will be available to the customer on Shopify PDP. Turning the toggle `on` when creating facilities or from the facility details page for `allow pickup` adds the facility to this facility group.
 
-Facilities have the option to choose whether or not to participate in selling their inventory online. If a facility is capable of fulfilling orders and wants its inventory to be sold online, it has to be included in the `Online facility` group. Retailers can also turn the toggle on from ‘sell online card' to add the facility to `Online facility` group. Similarly, if the facility supports HotWax Commerce Fulfillment app, then turn the toggle on of `Use Native Fulfillment App` or add the facility to `OMS Fulfillment group`.
+Facilities have the option to choose whether or not to participate in selling their inventory online. If a facility is capable of fulfilling orders and wants its inventory to be sold online, it has to be included in the `Online facility` group. Retailers can also turn the toggle on from 'sell online card' to add the facility to `Online facility` group. Similarly, if the facility supports HotWax Commerce Fulfillment app, then turn the toggle on of `Use Native Fulfillment App` or add the facility to `OMS Fulfillment group`.
 
 # Manage Inventory
 
